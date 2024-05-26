@@ -65,7 +65,7 @@ public class Part03StepVerifierTest {
 
 	@Test
 	public void countWithVirtualTime() {
-		workshop.expect3600Elements(() -> Flux.interval(Duration.ofSeconds(1)).take(3600));
+		workshop.expect3600Elements(() -> Flux.interval(Duration.ofMillis(1)).take(3600));
 	}
 
 }
